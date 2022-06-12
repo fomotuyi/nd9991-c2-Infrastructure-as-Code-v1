@@ -13,7 +13,8 @@ Resources:
     Type: AWS::EC2::SecurityGroup
   Properties:
     GroupDescription: Allow http to client host
-    VpcId: Ref: myVpc
+    VpcId: 
+      Ref: myVpc
     SecurityGroupIngress:
       - IpProtocol: tcp
         FromPort: 80
