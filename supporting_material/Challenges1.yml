@@ -1,5 +1,3 @@
-AWSTemplateFormatVersion: 2010-09-09
-Description: Fiyinfoluwa Omotuyi / Udacity - This template deploys security group
 Parameters:
   myVPC:
       Description: VPC used to deploy our resources below
