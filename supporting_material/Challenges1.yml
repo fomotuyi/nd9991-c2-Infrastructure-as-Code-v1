@@ -11,20 +11,20 @@ Parameters:
 Resources:
   MywebAccessSecurityGroup:
     Type: AWS::EC2::SecurityGroup
-  Properties:
-    GroupDescription: Allow http to our test host
-    VpcId: 
-      Ref: myVPC
-    SecurityGroupIngress:
-      - IpProtocol: tcp
-        FromPort: 80
-        ToPort: 80
-        CidrIp: 0.0.0.0/0
-    SecurityGroupEgress:
-      - IpProtocol: -1
-        FromPort: -1
-        ToPort: -1
-        CidrIp: 0.0.0.0/0
+    Properties:
+      GroupDescription: Allow http to our test host
+      VpcId: 
+        Ref: myVPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+      SecurityGroupEgress:
+        - IpProtocol: -1
+          FromPort: -1
+          ToPort: -1
+          CidrIp: 0.0.0.0/0
   MywebAccessInstance:
     Type: AWS::EC2::Instance
     Properties:
