@@ -1,7 +1,7 @@
 [
 
     {
-        "ParameterKey":  "myVpc",
+        "ParameterKey":  "myVPC",
         "ParameterValue": "vpc-0d6f9db497e060717"
     },
 
