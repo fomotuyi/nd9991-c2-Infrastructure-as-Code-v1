@@ -9,23 +9,23 @@ Parameters:
       Description: AMI to use for our base image
       Type: String
 Resources:
-  MywebAccessSecurityGroup:
+  myWebAccessSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Allow http to our test host
-      VpcId: 
-        Ref: myVPC
-      SecurityGroupIngress:
+        GroupDescription: Allow http to our test host
+        VpcId:
+          Ref: myVPC
+        SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 80
           ToPort: 80
           CidrIp: 0.0.0.0/0
-      SecurityGroupEgress:
+        SecurityGroupEgress:
         - IpProtocol: -1
           FromPort: -1
           ToPort: -1
           CidrIp: 0.0.0.0/0
-  MywebAccessInstance:
+  myWebServerInstance: 
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: t3.micro
